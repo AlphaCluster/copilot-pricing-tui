@@ -26,11 +26,25 @@ Selected models persist in `data/session.json` (or next to your pricing file). P
 
 ## Views
 
-1. **Catalog** — every model row from the official pricing tables, including default vs long-context tiers, plus SWE-bench Verified / Terminal-Bench 2.1 / LiveCodeBench where Vals has a score. Search, filter by provider or class, sort, and multi-select.
-2. **Compare** — selected models ranked on a metric you choose. Column layout follows window width; `v` cycles presets (auto / pricing / benches / full), `o` toggles individual columns, and `b` shows or hides Terminal-Bench and LiveCodeBench.
-3. **Estimate** — pick a token mix (quick chat, coding chat, agent session, long context) or edit the counts. See USD, credits, percent of plan, and how many of those turns fit in the month.
+### Catalog
 
-If nothing is selected, Compare and Estimate use the currently visible catalog set.
+![Catalog view: the model table with filters, benchmark scores, and a detail pane](docs/catalog.png)
+
+Every model row from the official pricing tables, including default vs long-context tiers, plus SWE-bench Verified / Terminal-Bench 2.1 / LiveCodeBench where Vals has a score. Search, filter by provider or class, sort, and multi-select.
+
+### Compare
+
+![Compare view: selected models ranked by a typical coding turn, with prices and benchmark columns](docs/compare.png)
+
+Selected models ranked on a metric you choose. Column layout follows window width; `v` cycles presets (auto / pricing / benches / full), `o` toggles individual columns, and `b` shows or hides Terminal-Bench and LiveCodeBench.
+
+### Estimate
+
+![Estimate view: a coding-chat token mix priced against the Pro+ allowance](docs/estimate.png)
+
+Pick a token mix (quick chat, coding chat, agent session, long context) or edit the counts. See USD, credits, percent of plan, and how many of those turns fit in the month.
+
+If nothing is selected, Compare and Estimate use the currently visible catalog set. The screenshots use the GitHub theme with eight models selected and Pro+ as the plan.
 
 ## Keys
 
