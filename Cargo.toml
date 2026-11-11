@@ -1,0 +1,20 @@
+[package]
+name = "copilot-pricing"
+version = "0.1.0"
+edition = "2024"
+description = "Terminal UI to compare GitHub Copilot model pricing"
+license = "MIT"
+readme = "README.md"
+keywords = ["github", "copilot", "pricing", "tui"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+ratatui = "0.30"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
