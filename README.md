@@ -56,7 +56,9 @@ If nothing is selected, Compare and Estimate use the currently visible catalog s
 | `?` | Help |
 | `q` | Quit |
 
-## Plans (as of 2026-08-14)
+## Plans (checked 2026-11-10)
+
+Prices and allowances below match [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans). `p` cycles only the plans that include a monthly allowance. Copilot Free and Copilot Student have an unpublished credit allowance and are not listed.
 
 | Plan | Price | Monthly AI credits |
 | --- | ---: | ---: |
@@ -65,12 +67,18 @@ If nothing is selected, Compare and Estimate use the currently visible catalog s
 | Max | $100 | 20,000 ($100 base + $100 flex) |
 | Business | $19 / user | 1,900, pooled |
 | Enterprise | $39 / user | 3,900, pooled |
+| Copilot access | $0 with a GitHub Enterprise Cloud license, or $10 / user as Copilot Standalone | None. Usage is billed from the first request |
+
+Base credits match the subscription price and do not change. Flex credits are extra and GitHub can change them. Business and Enterprise credits are pooled across the billing entity. Copilot access is for eligible enterprises only and is left out of the estimator: with no included credits, percent-of-plan and turns-per-month would both be zero.
+
+Paid plans get 10% off model cost when auto model selection is on in Copilot Chat or the Copilot cloud agent. Press `d` to apply that discount. Through November 30, 2026, Copilot Fusion is a separate 30% discount on model costs. The estimator does not apply the Fusion rate.
 
 ## Data
 
 The TUI does not hardcode prices. It reads `data/pricing.json`. Model rates come from GitHub's published tables; SWE scores come from [Vals AI](https://www.vals.ai/benchmarks/swebench) using mini-SWE-agent so models share the same harness:
 
 - [Models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
+- [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 - [Usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)
 - [Usage-based billing for organizations](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises)
 - [SWE-bench Verified](https://www.vals.ai/benchmarks/swebench), [Terminal-Bench 2.1](https://www.vals.ai/benchmarks/terminal-bench-2-1), [LiveCodeBench](https://www.vals.ai/benchmarks/lcb)

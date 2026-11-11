@@ -3,7 +3,8 @@
 use crate::data::{Model, Plan, Usage};
 
 /// Paid Copilot plans get 10% off when auto model selection is used
-/// in Copilot Chat, Copilot CLI, the Copilot app, or cloud agent.
+/// in Copilot Chat or the Copilot cloud agent.
+/// Copilot Fusion's 30% discount (through 2026-11-30) is separate and not applied here.
 pub const AUTO_DISCOUNT: f64 = 0.10;
 
 #[derive(Clone, Copy, Debug, PartialEq)]

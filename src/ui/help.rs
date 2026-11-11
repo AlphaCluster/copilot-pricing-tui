@@ -102,7 +102,7 @@ fn help_lines(width: usize) -> Vec<Line<'static>> {
             ("o", "hide/show columns"),
             ("b", "extra benches"),
             ("p P", "cycle plan"),
-            ("d", "10% discount"),
+            ("d", "10% auto discount"),
             ("t T", "cycle theme"),
             ("u", "refresh docs"),
             ("?", "this help"),
@@ -111,6 +111,14 @@ fn help_lines(width: usize) -> Vec<Line<'static>> {
     ));
     lines.push(Line::raw(""));
 
+    lines.extend(wrap_muted(
+        "Plans with an allowance: Pro, Pro+, Max, Business, Enterprise. Copilot access includes none.",
+        width,
+    ));
+    lines.extend(wrap_muted(
+        "d is the 10% auto-selection discount. Copilot Fusion's 30% (through 2026-11-30) is separate.",
+        width,
+    ));
     lines.extend(wrap_muted(
         "Coding chat is 12k input / 6k cached / 1.5k cache-write / 2k output.",
         width,
